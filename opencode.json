@@ -11,6 +11,19 @@
 			"type": "remote",
 			"url": "https://mcp.prisma.io/mcp",
 			"enabled": false
+		},
+		"figma": {
+			"type": "local",
+			"command": [
+				"cmd",
+				"/c",
+				"npx",
+				"-y",
+				"figma-developer-mcp",
+				"--figma-api-key=${FIGMA_API_KEY}",
+				"--stdio"
+			],
+			"enabled": false
 		}
 	}
 }
