@@ -20,7 +20,7 @@
 				"npx",
 				"-y",
 				"figma-developer-mcp",
-				"--figma-api-key=${FIGMA_API_KEY}",
+				"--figma-api-key={env:FIGMA_API_KEY}",
 				"--stdio"
 			],
 			"enabled": false

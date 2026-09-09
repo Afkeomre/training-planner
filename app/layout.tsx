@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="ru" className={`${mPlus.className} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <main className="flex-1">
+        <main className="flex-1 flex flex-col">
           <Container>{children}</Container>
         </main>
       </body>

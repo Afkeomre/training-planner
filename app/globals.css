@@ -1,1 +1,55 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-brand-1: #92a3fd;
+  --color-brand-2: #9dceff;
+  --color-secondary-1: #c58bf2;
+  --color-secondary-2: #eea4ce;
+  --color-black-1: #1d1617;
+  --color-gray-1: #7b6f72;
+  --color-gray-2: #ada4a5;
+  --color-gray-3: #dddada;
+  --color-border-1: #f7f8f8;
+
+  --gradient-brand: linear-gradient(
+    274.42deg,
+    var(--color-brand-1) 0%,
+    var(--color-brand-2) 124.21%
+  );
+
+  --gradient-brand-invert: linear-gradient(
+    274.42deg,
+    var(--color-brand-2) 0%,
+    var(--color-brand-1) 124.21%
+  );
+}
+
+/* Gradients */
+@utility bg-brand-gradient {
+  background: var(--gradient-brand);
+}
+
+@utility bg-brand-gradient-invert {
+  background: var(--gradient-brand-invert);
+}
+
+/* Shadows */
+@utility btn-shadow {
+  box-shadow: 0 10px 22px 0 rgba(149, 173, 254, 0.3);
+}
+
+/* Effects */
+@utility hover-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background: var(--gradient-brand-invert);
+  transition: opacity 0.5s ease;
+
+  @media (hover: hover) {
+    &:where(button:hover *) {
+      opacity: 1;
+    }
+  }
+}
