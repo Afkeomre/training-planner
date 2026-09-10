@@ -22,20 +22,11 @@
     var(--color-brand-2) 0%,
     var(--color-brand-1) 124.21%
   );
-}
 
-/* Gradients */
-@utility bg-brand-gradient {
-  background: var(--gradient-brand);
-}
+  --shadow-btn: 0 10px 22px 0 rgba(149, 173, 254, 0.3);
 
-@utility bg-brand-gradient-invert {
-  background: var(--gradient-brand-invert);
-}
-
-/* Shadows */
-@utility btn-shadow {
-  box-shadow: 0 10px 22px 0 rgba(149, 173, 254, 0.3);
+  --shadow-focus-soft: 0 0 16px
+    color-mix(in srgb, var(--color-gray-1) 20%, transparent);
 }
 
 /* Effects */
@@ -48,7 +39,7 @@
   transition: opacity 0.5s ease;
 
   @media (hover: hover) {
-    &:where(button:hover *) {
+    &:where(button:hover *, a:hover *) {
       opacity: 1;
     }
   }

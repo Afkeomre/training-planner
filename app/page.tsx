@@ -21,7 +21,7 @@ export default function HomePage() {
           </Subtitle>
         </Stack>
       </Stack>
-      <Button>Начать</Button>
+      <Button href="/register">Начать</Button>
     </>
   );
 }

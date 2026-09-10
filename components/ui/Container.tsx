@@ -4,7 +4,7 @@ type Props = {
 
 export default function Container({ children }: Props) {
   return (
-    <div className="px-8 py-10 max-w-screen-lg mx-auto flex-1 flex flex-col items-center justify-between gap-4">
+    <div className="px-8 py-10 max-w-screen-lg w-full mx-auto flex-1 flex flex-col items-center justify-between gap-12">
       {children}
     </div>
   );
