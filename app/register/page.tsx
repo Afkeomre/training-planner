@@ -1,12 +1,12 @@
 import Stack from '@/components/ui/Stack';
 import TitleGroup from '@/components/ui/TitleGroup';
+import AuthFooter from '@/components/features/AuthFooter';
 import Input from '@/components/ui/Input';
 import UserIcon from '@/components/ui/icons/UserIcon';
 import EnvelopeIcon from '@/components/ui/icons/EnvelopeIcon';
 import LockIcon from '@/components/ui/icons/LockIcon';
 import EyeCrossedIcon from '@/components/ui/icons/EyeCrossedIcon';
 import Button from '@/components/ui/Button';
-import Link from 'next/link';
 
 export default function RegisterPage() {
   return (
@@ -14,11 +14,11 @@ export default function RegisterPage() {
       <TitleGroup eyebrow="Добро пожаловать!">Создайте аккаунт</TitleGroup>
 
       <form
-        className="flex flex-1 flex-col justify-between items-center gap-4"
+        className="flex flex-1 flex-col w-full justify-between items-center gap-4"
         method="post"
         action="#"
       >
-        <Stack className="gap-4">
+        <Stack className="w-full max-w-[440px] gap-4">
           <Input
             label="Имя"
             name="firstName"
@@ -53,7 +53,7 @@ export default function RegisterPage() {
             required
           />
 
-          <label className="flex items-start gap-3">
+          <label className="w-full flex items-start gap-3">
             <input
               type="checkbox"
               name="terms"
@@ -69,7 +69,7 @@ export default function RegisterPage() {
               >
                 Политику конфиденциальности
               </a>{' '}
-              и{' '}
+              и{'\u00A0'}
               <a
                 className="underline hover:text-brand-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-1 focus-visible:ring-offset-1 rounded-sm transition-colors"
                 href="#"
@@ -83,15 +83,7 @@ export default function RegisterPage() {
         <Button type="submit">Зарегистрироваться</Button>
       </form>
 
-      <p className="text-black-1 text-sm">
-        Уже есть аккаунт?{' '}
-        <Link
-          className="font-medium rounded-sm text-secondary-1 hover:underline hover:text-brand-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-1 focus-visible:ring-offset-2 active:text-secondary-2 transition-colors"
-          href="/login"
-        >
-          Войти
-        </Link>
-      </p>
+      <AuthFooter content="Уже есть аккаунт?" path="/login" link="Войти" />
     </>
   );
 }

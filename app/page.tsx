@@ -13,6 +13,8 @@ export default function HomePage() {
           alt="Бегущий человек"
           width={264}
           height={229}
+          loading="eager"
+          style={{ width: 'auto', height: 'auto' }}
         />
         <Stack className="justify-center gap-2">
           <Title className="text-4xl text-center">Дневник тренировок</Title>

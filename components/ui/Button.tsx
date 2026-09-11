@@ -27,7 +27,7 @@ export default function Button({
 
   return (
     <button type={type} className={`${styles} ${className}`}>
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 flex gap-2 items-center">{children}</span>
       <span className="hover-layer" aria-hidden="true"></span>
     </button>
   );
