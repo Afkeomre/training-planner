@@ -24,6 +24,7 @@
   );
 
   --shadow-btn: 0 10px 22px 0 rgba(149, 173, 254, 0.3);
+  --shadow-nav: 0 10px 40px 0 rgba(29, 22, 23, 0.07);
 
   --shadow-focus-soft: 0 0 16px
     color-mix(in srgb, var(--color-gray-1) 20%, transparent);
